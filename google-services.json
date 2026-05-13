@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "23043730305",
+    "project_id": "medilinkchain",
+    "storage_bucket": "medilinkchain.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23043730305:android:040aa3941a463b7c7cd680",
+        "android_client_info": {
+          "package_name": "com.example.medilinkchain"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3fHzuT2xzVeDXF72-uXGg7W3hs4_-e6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

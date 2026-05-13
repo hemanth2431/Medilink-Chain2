@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#1976D2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dp"/>
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:hint="Email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="280dp"
+        android:padding="12dp"
+        android:background="#FFFFFF"/>
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350dp"
+        android:padding="12dp"
+        android:background="#FFFFFF"/>
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:text="Login"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:backgroundTint="#1976D2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="440dp"/>
+
+</RelativeLayout>
