@@ -1,50 +1,488 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5">
+    android:background="@color/colorLightGrayBg">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Create Account"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:textColor="#1976D2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"/>
+    <!-- ═══════════════════════════════════════════════════════════
+         SCROLLABLE CONTENT
+    ═══════════════════════════════════════════════════════════ -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
 
-    <EditText
-        android:id="@+id/signupEmail"
-        android:layout_width="280dp"
-        android:layout_height="50dp"
-        android:hint="Email"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="250dp"
-        android:padding="12dp"
-        android:background="#FFFFFF"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingBottom="36dp">
 
-    <EditText
-        android:id="@+id/signupPassword"
-        android:layout_width="280dp"
-        android:layout_height="50dp"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="320dp"
-        android:padding="12dp"
-        android:background="#FFFFFF"/>
+            <!-- ─── TOP HEADER SECTION ──────────────────────────────── -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="310dp"
+                android:background="@drawable/bg_hero_gradient">
 
-    <Button
-        android:id="@+id/signupBtn"
-        android:layout_width="260dp"
-        android:layout_height="50dp"
-        android:text="Sign Up"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:backgroundTint="#1976D2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="410dp"/>
+                <!-- Subtle Medical Hexagons & Plus Overlay -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.85"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bg_hero_medical_overlay" />
+
+                <!-- Centered Hero Branding -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="24dp">
+
+                    <!-- MediLink Chain Logo in White Rounded-Square Container -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="66dp"
+                        android:layout_height="66dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="8dp"
+                        app:strokeWidth="0dp">
+
+                        <ImageView
+                            android:id="@+id/logo_image"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="MediLink Chain Logo"
+                            android:src="@drawable/ic_medilink_logo_blue" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- App Title -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:letterSpacing="0.01"
+                        android:text="MediLink Chain"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <!-- Subtitle -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:letterSpacing="0.02"
+                        android:text="Unified Healthcare Network"
+                        android:textColor="#BAE6FD"
+                        android:textSize="13sp" />
+
+                    <!-- Security Badge -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/bg_security_badge_white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="14dp"
+                        android:paddingVertical="6dp">
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_security_shield"
+                            app:tint="@color/colorMedicalBlue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:text="Secure. Private. End-to-End Protected."
+                            android:textColor="@color/colorMedicalBlue"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- ─── MAIN REGISTRATION CARD ──────────────────────────── -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="-40dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="12dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="22dp"
+                    android:paddingTop="24dp"
+                    android:paddingBottom="24dp">
+
+                    <!-- Heading -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Create Account"
+                        android:textColor="@color/colorTextDark"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <!-- Description -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="22dp"
+                        android:text="Join MediLink Chain and take control of your health records."
+                        android:textColor="@color/colorTextDarkSecondary"
+                        android:textSize="13sp" />
+
+                    <!-- ── 1. EMAIL ADDRESS ─────────────────────────── -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:text="Email Address"
+                        android:textColor="@color/colorTextDarkSecondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_input_field_selector"
+                        android:paddingHorizontal="14dp">
+
+                        <ImageView
+                            android:id="@+id/icon_email"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_mail_custom"
+                            app:tint="@color/colorTextDarkSecondary" />
+
+                        <EditText
+                            android:id="@+id/signupEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="12dp"
+                            android:layout_toEndOf="@id/icon_email"
+                            android:autofillHints=""
+                            android:background="@null"
+                            android:hint="Enter Email Address"
+                            android:imeOptions="actionNext"
+                            android:importantForAutofill="no"
+                            android:inputType="textEmailAddress|textNoSuggestions"
+                            android:maxLines="1"
+                            android:textColor="@color/colorTextDark"
+                            android:textColorHint="@color/colorTextDarkMuted"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <!-- ── 2. PASSWORD ──────────────────────────────── -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:text="Password"
+                        android:textColor="@color/colorTextDarkSecondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_input_field_selector"
+                        android:paddingHorizontal="14dp">
+
+                        <ImageView
+                            android:id="@+id/icon_lock"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_lock_custom"
+                            app:tint="@color/colorTextDarkSecondary" />
+
+                        <EditText
+                            android:id="@+id/signupPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_toStartOf="@id/btn_toggle_password"
+                            android:layout_toEndOf="@id/icon_lock"
+                            android:autofillHints=""
+                            android:background="@null"
+                            android:hint="Enter Password"
+                            android:imeOptions="actionNext"
+                            android:importantForAutofill="no"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:textColor="@color/colorTextDark"
+                            android:textColorHint="@color/colorTextDarkMuted"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/btn_toggle_password"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="Toggle Password Visibility"
+                            android:padding="4dp"
+                            android:src="@drawable/ic_eye_off"
+                            app:tint="@color/colorTextDarkMuted" />
+                    </RelativeLayout>
+
+                    <!-- ── 3. CONFIRM PASSWORD ──────────────────────── -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:text="Confirm Password"
+                        android:textColor="@color/colorTextDarkSecondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginBottom="22dp"
+                        android:background="@drawable/bg_input_field_selector"
+                        android:paddingHorizontal="14dp">
+
+                        <ImageView
+                            android:id="@+id/icon_lock_confirm"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_lock_custom"
+                            app:tint="@color/colorTextDarkSecondary" />
+
+                        <EditText
+                            android:id="@+id/signupConfirmPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_toStartOf="@id/btn_toggle_confirm_password"
+                            android:layout_toEndOf="@id/icon_lock_confirm"
+                            android:autofillHints=""
+                            android:background="@null"
+                            android:hint="Confirm Password"
+                            android:imeOptions="actionDone"
+                            android:importantForAutofill="no"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:textColor="@color/colorTextDark"
+                            android:textColorHint="@color/colorTextDarkMuted"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/btn_toggle_confirm_password"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="Toggle Confirm Password Visibility"
+                            android:padding="4dp"
+                            android:src="@drawable/ic_eye_off"
+                            app:tint="@color/colorTextDarkMuted" />
+                    </RelativeLayout>
+
+                    <!-- ── 4. CREATE ACCOUNT BUTTON WITH RIGHT ARROW ── -->
+                    <RelativeLayout
+                        android:id="@+id/signupBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:background="@drawable/bg_btn_signin_gradient"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <TextView
+                            android:id="@+id/textSignupBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="Create Account"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/icon_arrow_right"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="18dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_arrow_right_bold" />
+                    </RelativeLayout>
+
+                    <!-- ── BELOW THE BUTTON: SECURITY ENCRYPTION ────── -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_lock_custom"
+                            app:tint="@color/colorTextDarkMuted" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:text="Your data is encrypted and secure with MediLink Chain"
+                            android:textColor="@color/colorTextDarkMuted"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <!-- ── SIGN IN LINK ─────────────────────────────── -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Already have an account? "
+                            android:textColor="@color/colorTextDarkSecondary"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/loginBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:padding="4dp"
+                            android:text="Sign In"
+                            android:textColor="@color/colorAccentBlue"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ─── BOTTOM MESSAGE ──────────────────────────────────── -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="24dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_security_shield"
+                    app:tint="@color/colorAccentBlue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="Your health data, your control."
+                    android:textColor="@color/colorTextDarkSecondary"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         LOADING OVERLAY
+    ═══════════════════════════════════════════════════════════ -->
+    <RelativeLayout
+        android:id="@+id/loadingOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#70000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="12dp"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingHorizontal="32dp"
+                android:paddingVertical="24dp">
+
+                <ProgressBar
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:indeterminateTint="@color/colorAccentBlue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Creating Account..."
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Encrypting health identity securely"
+                    android:textColor="@color/colorTextDarkSecondary"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
 
 </RelativeLayout>

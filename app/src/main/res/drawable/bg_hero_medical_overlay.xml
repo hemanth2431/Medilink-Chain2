@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="300dp"
+    android:viewportWidth="360"
+    android:viewportHeight="300">
+
+    <!-- Subtle Hexagons -->
+    <!-- Hexagon 1 (Top Left) -->
+    <path
+        android:strokeColor="#1EFFFFFF"
+        android:strokeWidth="1.2"
+        android:fillColor="#08FFFFFF"
+        android:pathData="M 30,30 L 50,18 L 70,30 L 70,52 L 50,64 L 30,52 Z" />
+    <path
+        android:strokeColor="#12FFFFFF"
+        android:strokeWidth="1"
+        android:pathData="M 70,30 L 90,18 L 110,30 L 110,52 L 90,64 L 70,52 Z" />
+
+    <!-- Hexagon 2 (Top Right) -->
+    <path
+        android:strokeColor="#1AFFFFFF"
+        android:strokeWidth="1.2"
+        android:fillColor="#08FFFFFF"
+        android:pathData="M 280,25 L 302,12 L 324,25 L 324,50 L 302,63 L 280,50 Z" />
+    <path
+        android:strokeColor="#10FFFFFF"
+        android:strokeWidth="1"
+        android:pathData="M 324,25 L 346,12 L 368,25 L 368,50 L 346,63 L 324,50 Z" />
+
+    <!-- Hexagon 3 (Bottom Left) -->
+    <path
+        android:strokeColor="#18FFFFFF"
+        android:strokeWidth="1.2"
+        android:fillColor="#06FFFFFF"
+        android:pathData="M 10,180 L 32,168 L 54,180 L 54,204 L 32,216 L 10,204 Z" />
+
+    <!-- Hexagon 4 (Bottom Right) -->
+    <path
+        android:strokeColor="#18FFFFFF"
+        android:strokeWidth="1.2"
+        android:fillColor="#06FFFFFF"
+        android:pathData="M 300,170 L 322,158 L 344,170 L 344,194 L 322,206 L 300,194 Z" />
+
+    <!-- Medical "+" / Cross Symbols -->
+    <!-- Plus 1 -->
+    <path
+        android:strokeColor="#30FFFFFF"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M 45,110 L 55,110 M 50,105 L 50,115" />
+
+    <!-- Plus 2 -->
+    <path
+        android:strokeColor="#3838BDF8"
+        android:strokeWidth="2.2"
+        android:strokeLineCap="round"
+        android:pathData="M 315,100 L 327,100 M 321,94 L 321,106" />
+
+    <!-- Plus 3 -->
+    <path
+        android:strokeColor="#25FFFFFF"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:pathData="M 140,40 L 148,40 M 144,36 L 144,44" />
+
+    <!-- Plus 4 -->
+    <path
+        android:strokeColor="#25FFFFFF"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:pathData="M 230,45 L 238,45 M 234,41 L 234,49" />
+
+    <!-- Plus 5 (Bottom) -->
+    <path
+        android:strokeColor="#20FFFFFF"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:pathData="M 90,230 L 98,230 M 94,226 L 94,234" />
+
+    <!-- Plus 6 (Bottom Right) -->
+    <path
+        android:strokeColor="#2838BDF8"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M 265,220 L 275,220 M 270,215 L 270,225" />
+
+    <!-- Subtle Connected Network Nodes -->
+    <path
+        android:strokeColor="#12FFFFFF"
+        android:strokeWidth="1"
+        android:pathData="M 50,64 L 50,105 M 302,63 L 321,94" />
+
+    <path
+        android:fillColor="#3538BDF8"
+        android:pathData="M 180,20 A 2,2 0 1,1 180,20.01" />
+    <path
+        android:fillColor="#25FFFFFF"
+        android:pathData="M 200,240 A 2,2 0 1,1 200,240.01" />
+    <path
+        android:fillColor="#2538BDF8"
+        android:pathData="M 120,250 A 2.5,2.5 0 1,1 120,250.01" />
+
+</vector>

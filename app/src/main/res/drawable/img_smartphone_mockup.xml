@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="160dp"
+    android:height="200dp"
+    android:viewportWidth="160"
+    android:viewportHeight="200">
+
+    <!-- Phone Shadow -->
+    <path
+        android:pathData="M25,25 H135 A16,16 0 0,1 151,41 V175 A16,16 0 0,1 135,191 H25 A16,16 0 0,1 9,175 V41 A16,16 0 0,1 25,25 Z"
+        android:fillColor="#150D47A1" />
+
+    <!-- Smartphone Body Outer Bezel -->
+    <path
+        android:pathData="M22,12 H138 A16,16 0 0,1 154,28 V172 A16,16 0 0,1 138,188 H22 A16,16 0 0,1 6,172 V28 A16,16 0 0,1 22,12 Z"
+        android:fillColor="#092857" />
+
+    <!-- Smartphone Inner Glass Screen -->
+    <path
+        android:pathData="M24,15 H136 A13,13 0 0,1 149,28 V170 A13,13 0 0,1 136,183 H24 A13,13 0 0,1 11,170 V28 A13,13 0 0,1 24,15 Z"
+        android:fillColor="#FFFFFF" />
+
+    <!-- Top Camera / Notch Pill -->
+    <path
+        android:pathData="M65,19 H95 A3,3 0 0,1 98,22 V22 A3,3 0 0,1 95,25 H65 A3,3 0 0,1 62,22 V22 A3,3 0 0,1 65,19 Z"
+        android:fillColor="#092857" />
+
+    <!-- Screen Status / Header bar -->
+    <path
+        android:pathData="M18,34 H142 V60 H18 Z"
+        android:fillColor="#F0F6FF" />
+
+    <path
+        android:pathData="M26,44 H60 V48 H26 Z"
+        android:fillColor="#0D47A1" />
+
+    <path
+        android:pathData="M26,51 H48 V53 H26 Z"
+        android:fillColor="#94A3B8" />
+
+    <!-- Medical Dashboard Mini Card inside phone screen -->
+    <path
+        android:pathData="M22,68 H138 A8,8 0 0,1 146,76 V124 A8,8 0 0,1 138,132 H22 A8,8 0 0,1 14,124 V76 A8,8 0 0,1 22,68 Z"
+        android:fillColor="#F8FAFC" />
+
+    <!-- Heart Rate & ECG Line -->
+    <path
+        android:strokeColor="#0288D1"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M22,100 L44,100 L50,88 L58,114 L66,78 L74,108 L80,96 L86,100 L138,100" />
+
+    <!-- Vital metric text indicators inside card -->
+    <path
+        android:pathData="M24,76 H55 V81 H24 Z"
+        android:fillColor="#092857" />
+
+    <path
+        android:pathData="M24,84 H42 V87 H24 Z"
+        android:fillColor="#38BDF8" />
+
+    <path
+        android:pathData="M110,76 H136 V81 H110 Z"
+        android:fillColor="#10B981" />
+
+    <!-- Healthcare Shield with White Checkmark -->
+    <!-- Glow behind shield -->
+    <path
+        android:pathData="M80,154 A22,22 0 1,1 80,154.01"
+        android:fillColor="#150288D1" />
+
+    <!-- Blue Shield -->
+    <path
+        android:pathData="M80,136 L64,143 C64,158 71,168 80,172 C89,168 96,158 96,143 L80,136 Z"
+        android:fillColor="#0D47A1" />
+
+    <!-- White Check Mark -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M73,153 L77.5,157.5 L87,148" />
+
+    <!-- Subtle blockchain link points around shield -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M52,152 A2.5,2.5 0 1,1 52,152.01" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M108,152 A2.5,2.5 0 1,1 108,152.01" />
+
+    <!-- Bottom home bar -->
+    <path
+        android:pathData="M60,178 H100 A1.5,1.5 0 0,1 101.5,179.5 V179.5 A1.5,1.5 0 0,1 100,181 H60 A1.5,1.5 0 0,1 58.5,179.5 V179.5 A1.5,1.5 0 0,1 60,178 Z"
+        android:fillColor="#CBD5E1" />
+
+</vector>

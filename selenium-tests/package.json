@@ -1,0 +1,16 @@
+{
+  "name": "medilinkchain-selenium-tests",
+  "version": "1.0.0",
+  "description": "Selenium WebDriver E2E Automation Test Suite for MediLinkChain Web Frontend",
+  "main": "tests/login-tests.js",
+  "scripts": {
+    "test": "node tests/login-tests.js",
+    "test:headless": "HEADLESS=true node tests/login-tests.js"
+  },
+  "dependencies": {
+    "chromedriver": "^131.0.0",
+    "selenium-webdriver": "^4.27.0"
+  },
+  "author": "MediLinkChain QA Team",
+  "license": "MIT"
+}

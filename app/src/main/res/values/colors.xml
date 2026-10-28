@@ -1,5 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Premium harmonized healthcare colors -->
+    <color name="colorMedicalBlue">#0D47A1</color>
+    <color name="colorMedicalBlueLight">#E3F2FD</color>
+    <color name="colorMedicalBlueDark">#092857</color>
+    <color name="colorAccentBlue">#0288D1</color>
+    <color name="colorAccentCyan">#38BDF8</color>
+    <color name="colorLightGrayBg">#F0F6FF</color>
+    <color name="colorCardOutline">#E2E8F0</color>
+    <color name="colorTextDark">#0F172A</color>
+    <color name="colorTextDarkSecondary">#475569</color>
+    <color name="colorTextDarkMuted">#94A3B8</color>
+    
+    <!-- Role specific colors -->
+    <color name="colorPatientTheme">#0EA5E9</color>
+    <color name="colorDoctorTheme">#10B981</color>
+    
+    <!-- Emergency card -->
+    <color name="colorEmergencyTheme">#EF4444</color>
+    <color name="colorEmergencyThemeLight">#FEE2E2</color>
+    
+    <!-- AI Assist theme -->
+    <color name="colorAITheme">#8B5CF6</color>
+    <color name="colorAIThemeLight">#EDE9FE</color>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#0D47A1</color>
+    <color name="colorSecondary">#1976D2</color>
+    <color name="colorAccent">#29B6F6</color>
+    <color name="bgColor">#FFFFFF</color>
+    <color name="surfaceColor">#F4F7FC</color>
+    
+    <!-- Text Colors -->
+    <color name="textPrimary">#1A1D20</color>
+    <color name="textSecondary">#5F6368</color>
+    <color name="textMuted">#9AA0A6</color>
+    
+    <!-- Gradient Colors -->
+    <color name="emergencyStart">#FF5252</color>
+    <color name="emergencyEnd">#D32F2F</color>
+    
+    <color name="recordsStart">#42A5F5</color>
+    <color name="recordsEnd">#1565C0</color>
+    
+    <color name="viewStart">#FFA726</color>
+    <color name="viewEnd">#EF6C00</color>
+    
+    <color name="hospitalStart">#AB47BC</color>
+    <color name="hospitalEnd">#6A1B9A</color>
+    
+    <color name="sosStart">#66BB6A</color>
+    <color name="sosEnd">#2E7D32</color>
+    
+    <color name="chatbotStart">#26C6DA</color>
+    <color name="chatbotEnd">#00838F</color>
+    
+    <!-- Security Card Colors -->
+    <color name="securityBg">#EBF3FC</color>
+    <color name="securityText">#0D47A1</color>
 </resources>

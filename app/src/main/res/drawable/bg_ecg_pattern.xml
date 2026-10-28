@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="150dp"
+    android:viewportWidth="300"
+    android:viewportHeight="150">
+  <!-- Soft subtle red background line for ECG pulse -->
+  <path
+      android:pathData="M 0 75 L 60 75 L 80 50 L 95 100 L 115 20 L 130 90 L 145 75 L 200 75 L 215 60 L 225 90 L 235 45 L 245 80 L 255 75 L 300 75"
+      android:strokeWidth="2.5"
+      android:strokeColor="#FFCDD2"
+      android:strokeLineJoin="round"
+      android:strokeLineCap="round"/>
+</vector>

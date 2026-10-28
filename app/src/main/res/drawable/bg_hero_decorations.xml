@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="160dp"
+    android:viewportWidth="360"
+    android:viewportHeight="160">
+
+    <!-- Subtle heartbeat ECG line -->
+    <path
+        android:pathData="M 0,110 L 80,110 L 95,110 L 105,90 L 112,130 L 122,50 L 132,120 L 142,110 L 240,110 L 250,95 L 258,125 L 266,110 L 360,110"
+        android:strokeWidth="1.5"
+        android:strokeColor="#250D47A1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"/>
+
+    <!-- Subtle medical crosses -->
+    <!-- Cross 1 -->
+    <path
+        android:pathData="M 26,40 L 34,40 M 30,36 L 30,44"
+        android:strokeWidth="2"
+        android:strokeColor="#250D47A1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"/>
+    <!-- Cross 2 -->
+    <path
+        android:pathData="M 176,25 L 184,25 M 180,21 L 180,29"
+        android:strokeWidth="2"
+        android:strokeColor="#250D47A1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"/>
+    <!-- Cross 3 -->
+    <path
+        android:pathData="M 216,130 L 224,130 M 220,126 L 220,134"
+        android:strokeWidth="2"
+        android:strokeColor="#2529B6F6"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"/>
+
+    <!-- Security nodes network 1 (Left) -->
+    <path
+        android:pathData="M 20,120 L 50,135 L 70,115 L 20,120"
+        android:strokeWidth="1"
+        android:strokeColor="#150D47A1" />
+    <path
+        android:pathData="M 20,120 m -3,0 a 3,3 0 1,1 6,0 a 3,3 0 1,1 -6,0"
+        android:fillColor="#250D47A1" />
+    <path
+        android:pathData="M 50,135 m -3,0 a 3,3 0 1,1 6,0 a 3,3 0 1,1 -6,0"
+        android:fillColor="#250D47A1" />
+    <path
+        android:pathData="M 70,115 m -3,0 a 3,3 0 1,1 6,0 a 3,3 0 1,1 -6,0"
+        android:fillColor="#2529B6F6" />
+
+    <!-- Security nodes network 2 (Right) -->
+    <path
+        android:pathData="M 290,30 L 320,20 L 335,45 L 290,30"
+        android:strokeWidth="1"
+        android:strokeColor="#150D47A1" />
+    <path
+        android:pathData="M 290,30 m -3,0 a 3,3 0 1,1 6,0 a 3,3 0 1,1 -6,0"
+        android:fillColor="#250D47A1" />
+    <path
+        android:pathData="M 320,20 m -3,0 a 3,3 0 1,1 6,0 a 3,3 0 1,1 -6,0"
+        android:fillColor="#2529B6F6" />
+    <path
+        android:pathData="M 335,45 m -3,0 a 3,3 0 1,1 6,0 a 3,3 0 1,1 -6,0"
+        android:fillColor="#250D47A1" />
+
+    <!-- Small Healthcare Particles -->
+    <path
+        android:pathData="M 120,30 m -2,0 a 2,2 0 1,1 4,0 a 2,2 0 1,1 -4,0"
+        android:fillColor="#150D47A1" />
+    <path
+        android:pathData="M 150,120 m -1.5,0 a 1.5,1.5 0 1,1 3,0 a 1.5,1.5 0 1,1 -3,0"
+        android:fillColor="#1529B6F6" />
+    <path
+        android:pathData="M 260,40 m -2,0 a 2,2 0 1,1 4,0 a 2,2 0 1,1 -4,0"
+        android:fillColor="#1529B6F6" />
+    <path
+        android:pathData="M 310,130 m -1.5,0 a 1.5,1.5 0 1,1 3,0 a 1.5,1.5 0 1,1 -3,0"
+        android:fillColor="#150D47A1" />
+
+</vector>

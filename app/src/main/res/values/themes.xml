@@ -6,4 +6,12 @@
     </style>
 
     <style name="Theme.MediLinkChain" parent="Base.Theme.MediLinkChain" />
+
+    <style name="CircleImage" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="RoundedImage" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">12dp</item>
+    </style>
 </resources>

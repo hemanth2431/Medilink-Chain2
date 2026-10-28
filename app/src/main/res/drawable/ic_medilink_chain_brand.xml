@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+    <!-- Outer Shield Background -->
+    <path
+        android:fillColor="#18FFFFFF"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M32,4 L10,14 C10,36 20,52 32,60 C44,52 54,36 54,14 L32,4 Z" />
+
+    <!-- Center Medical Cross / Plus -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M28,20 H36 V28 H44 V36 H36 V44 H28 V36 H20 V28 H28 Z" />
+
+    <!-- Blockchain Link Accent Dots -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M32,10 A3,3 0 1,1 32,10.01" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M16,34 A3,3 0 1,1 16,34.01" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M48,34 A3,3 0 1,1 48,34.01" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M32,53 A3,3 0 1,1 32,53.01" />
+
+    <!-- Link Connection lines -->
+    <path
+        android:strokeColor="#38BDF8"
+        android:strokeWidth="1.5"
+        android:pathData="M32,13 L32,20 M19,34 L20,34 M45,34 L44,34 M32,47 L32,44" />
+</vector>

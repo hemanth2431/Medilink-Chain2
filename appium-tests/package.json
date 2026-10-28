@@ -1,0 +1,16 @@
+{
+  "name": "medilinkchain-appium-tests",
+  "version": "1.0.0",
+  "description": "Appium Mobile E2E Automation Test Suite for MediLinkChain Android App",
+  "main": "tests/app-login-tests.js",
+  "scripts": {
+    "test": "node tests/app-login-tests.js",
+    "test:emulator": "DEVICE_TYPE=emulator node tests/app-login-tests.js",
+    "test:device": "DEVICE_TYPE=device node tests/app-login-tests.js"
+  },
+  "dependencies": {
+    "webdriverio": "^8.36.0"
+  },
+  "author": "MediLinkChain Mobile QA Team",
+  "license": "MIT"
+}

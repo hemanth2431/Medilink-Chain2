@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- INTERNET PERMISSION (required for Supabase & Firebase REST API) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- LOCATION PERMISSIONS -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- CAMERA PERMISSION & HARDWARE FEATURE -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+
+    <!-- LOCAL NOTIFICATIONS & MEDICINE REMINDERS PERMISSIONS -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,28 +28,226 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MediLinkChain">
 
+        <!-- GOOGLE MAPS API KEY -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+
+        <!-- MEDICINE MANAGEMENT & REMINDER ACTIVITIES -->
         <activity
-            android:name=".SignupActivity"
+            android:name=".MedicineDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddEditMedicineActivity"
             android:exported="false" />
 
+        <!-- PRESCRIPTION STORAGE ACTIVITIES -->
+        <activity
+            android:name=".PrescriptionListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddPrescriptionActivity"
+            android:exported="false" />
+
+        <!-- LOCAL MEDICINE REMINDER RECEIVERS -->
+        <receiver
+            android:name=".MedicineAlarmReceiver"
+            android:exported="false" />
+
+        <receiver
+            android:name=".MedicineBootReceiver"
+            android:exported="true"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+
+        <!-- ORGANIZATION ADMINISTRATION ACTIVITIES -->
+        <activity
+            android:name=".AdminDashboardActivity"
+            android:exported="true" />
+        <activity
+            android:name=".HospitalManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorVerificationStatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PatientManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SystemMonitoringActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AuditLogActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrganizationSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SuperAdminUserManagementActivity"
+            android:exported="false" />
+
+        <!-- DOCTOR FIRST-LOGIN PASSWORD CHANGE -->
+        <activity
+            android:name=".DoctorChangePasswordActivity"
+            android:exported="false"
+            android:label="Set New Password" />
+
+        <!-- HEALTH ASSESSMENT ACTIVITIES (Rule-based & Calculation-based) -->
+        <activity
+            android:name=".HealthAssessmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HealthAssessmentResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HealthAssessmentHistoryActivity"
+            android:exported="false" />
+
+        <!-- LEGACY HEALTH SCREENING ACTIVITIES (Preserved for compatibility) -->
+        <activity
+            android:name=".HealthRiskAssessmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HealthRiskResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HealthRiskHistoryActivity"
+            android:exported="false" />
+
+        <!-- EXISTING CORE ACTIVITIES -->
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CompleteProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RecordDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DocumentViewerActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".DoctorScanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PatientDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HospitalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorTimingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorHospitalPatientsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EmergencyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewRecordsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MedicalRecordActivity"
+            android:exported="false" />
+        <!-- EMAIL VERIFICATION & PASSWORD RECOVERY ACTIVITIES -->
+        <activity
+            android:name=".EmailVerificationActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:exported="true">
+            <!-- Intercept Firebase Action Handler HTTPS Links -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="https"
+                    android:host="medilinkchain.firebaseapp.com"
+                    android:pathPrefix="/__/auth/action" />
+            </intent-filter>
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="https"
+                    android:host="medilinkchain.web.app"
+                    android:pathPrefix="/__/auth/action" />
+            </intent-filter>
+
+            <!-- Custom Scheme Deep Link -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="medilinkchain"
+                    android:host="reset-password" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".SignupActivity"
+            android:exported="true" />
         <activity
             android:name=".DashboardActivity"
             android:exported="false" />
-
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
-
+            android:exported="true" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".SettingsActivity"
+            android:exported="true" />
 
+        <!-- LAUNCHER ACTIVITY -->
+        <activity
+            android:name=".GetStartedActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.medilinkchain.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
     </application>
+
+</manifest>

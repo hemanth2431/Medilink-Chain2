@@ -1,0 +1,45 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+  <!-- Circular light blue background accent -->
+  <path
+      android:pathData="M50 50m-45 0a45 45 0 1 1 90 0a45 45 0 1 1 -90 0"
+      android:fillColor="#E3F2FD"/>
+  <!-- Doctor Body / Clothes -->
+  <path
+      android:pathData="M25 85c0-10 10-18 25-18s25 8 25 18z"
+      android:fillColor="#1565C0"/>
+  <!-- Doctor Stethoscope/Coat inner -->
+  <path
+      android:pathData="M44 67h12v15H44z"
+      android:fillColor="#FFFFFF"/>
+  <!-- Doctor Neck -->
+  <path
+      android:pathData="M46 54h8v14h-8z"
+      android:fillColor="#FFD180"/>
+  <!-- Doctor Face -->
+  <path
+      android:pathData="M50 48m-14 0a14 14 0 1 1 28 0a14 14 0 1 1 -28 0"
+      android:fillColor="#FFE0B2"/>
+  <!-- Hair -->
+  <path
+      android:pathData="M36 44c0-8 6-12 14-12s14 4 14 12c-4-4-10-4-14-4s-10 0-14 4z"
+      android:fillColor="#37474F"/>
+  <!-- Stethoscope on neck -->
+  <path
+      android:pathData="M42 60c0 4 3 7 8 7s8-3 8-7"
+      android:strokeWidth="2.5"
+      android:strokeColor="#78909C"
+      android:strokeLineCap="round"/>
+  <!-- Red Cross Icon on shoulder/badge -->
+  <path
+      android:pathData="M70 45h8v8h-8z"
+      android:fillColor="#E3F2FD"/>
+  <path
+      android:pathData="M73 49h2M74 48v2"
+      android:strokeWidth="1.5"
+      android:strokeColor="#D32F2F"
+      android:strokeLineCap="round"/>
+</vector>
